@@ -1,3 +1,3 @@
-# To-do list aplication with React.js
+# To-do list application with React.js
 
 **(Work in progress)**
