@@ -1,3 +1,3 @@
-# todo-list-with-reactjs
+# To-do list aplication with React.js
 
 **(Work in progress)**
