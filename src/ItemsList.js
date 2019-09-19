@@ -4,20 +4,22 @@ import './ItemsList.css'
 // Does a UI component have to take props?
 const ItemsList = (props) => {
 
-    console.log(props);
+    //console.log(props);
 
     // Destructuring
-    // Now 'items' is an array of 3 strings
+    // Now 'items' is an array of 3 objects
     const {items} = props;
 
     // next up: do the mapping and return three html templates
-    const itemsList = items.map(item => {
+    const itemsList = items.map(itemObject => {
+        
+        
         return (
-            <li>{item}</li>
+            <li key={itemObject.id}>{itemObject.item}</li>
         )
     });
 
-    console.log(items);
+    //console.log(itemsList);
 
     return (
         <ul>
