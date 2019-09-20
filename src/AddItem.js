@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './AddItem.css'
 
 class AddItem extends Component {
 
@@ -19,17 +20,26 @@ class AddItem extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addItem(this.state);
-        //console.log(e.target.firstChild.value);
-        e.target.firstChild.value = "";
+
+        if(e.target.firstChild.firstChild.value !== "") {
+            this.props.addItem(this.state);
+            //console.log(e.target.firstChild.firstChild);
+            e.target.firstChild.firstChild.value = "";
+        }
+
         
     }
 
     render () {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Add an item..." onChange={this.handleChange} />
-                <button type="submit">Submit</button>
+                <div className="form-group">
+                    <input type="text" placeholder="Add a new todo..." className="form-control bg-dark text-light"
+                        onChange={this.handleChange} />
+                </div>
+
+                
+                <button type="submit" className="btn btn-outline-warning">Add</button>
             </form>
         );
     }

@@ -4,7 +4,7 @@ import './ItemsList.css'
 // Does a UI component have to take props?
 const ItemsList = (props) => {
 
-    //console.log(props);
+    //console.log("props:", props);
 
     // Destructuring
     // Now 'items' is an array of 3 objects
@@ -15,14 +15,16 @@ const ItemsList = (props) => {
         
         
         return (
-            <li key={itemObject.id}>{itemObject.item}</li>
+            <li key={itemObject.id} onClick={() => {props.deleteItem(itemObject.id)}}>
+                {itemObject.item}
+            </li>
         )
     });
 
     //console.log(itemsList);
 
     return (
-        <ul>
+        <ul className="mb-5">
             {itemsList}
         </ul>
     );

@@ -5,4 +5,18 @@ ul {
 ul li {
     list-style-type: none;
     cursor: pointer;
+    font-size: 20px;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-bottom: none;
+    padding: 10px;
+    /*color: rgba(255, 193, 7, 1);*/
+}
+
+ul li:last-child {
+    border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+ul li:hover {
+    text-decoration: line-through;
+    transition: 600ms all ease-in-out
 }
